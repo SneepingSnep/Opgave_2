@@ -90,20 +90,22 @@ int main(void)
             itoa(num[2],numstring[3]+2,16);
             break;
         default: // Ole's special Case
-        clear_display();
-        sendStrXY("OLE HVA FAEN",3,0);
-        olestate = true;
+            clear_display();
+            sendStrXY("OLE HVA FAEN",3,0);
+            
             break;
         }
-        // printer resultatet
-        if (!olestate){
-            sendStrXY(numstring[2],2,0);
-            sendStrXY(numstring[3],6,0);
-            olestate = false;
-        }
+        
+        
 
+        sendStrXY(numstring[2],2,0);
+        sendStrXY(numstring[3],6,0);
         
         _delay_ms(500);
+        
+
+        
+       
 
         while (!isbuttonactive()); // Venter på button reset tryk
         
