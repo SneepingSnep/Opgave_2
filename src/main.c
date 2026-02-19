@@ -14,7 +14,7 @@ void init(){
 	
     
     DDRE &=~(1<<5);
-    PORTE |=(1<<5); //internal pullup on digital pin 13
+    PORTE |=(1<<5); //internal pullup on digital pin 3
 
     EICRB = 0x00; 
     EIMSK |= (1<<INT5); // enable INT5 interrupt
